@@ -1,7 +1,6 @@
 [build]
   command = "./build_function.sh"
-  functions = ""
-  publish = "build"
+  functions = "build/"
 
 [build.environment]
   GO_IMPORT_PATH = "github.com/tungstenoapp/download-api"
