@@ -104,7 +104,7 @@ func init() {
 
 	log.Println("Starting releases ..")
 	s3Config := &aws.Config{
-		Credentials:      credentials.NewStaticCredentials(os.Getenv("AWS_ACCESS_KEY_ID"), os.Getenv("AWS_SECRET_ACCESS_KEY"), ""),
+		Credentials:      credentials.NewStaticCredentials(os.Getenv("awsAccessKeyId"), os.Getenv("awsSecretAccessKey"), ""),
 		Endpoint:         aws.String(os.Getenv("S3_ENDPOINT")),
 		Region:           aws.String("eu-west-1"),
 		S3ForcePathStyle: aws.Bool(true),
