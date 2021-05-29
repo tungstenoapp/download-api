@@ -1,6 +1,7 @@
 package releases
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"sort"
@@ -46,9 +47,13 @@ func GetReleasesByTypePlatform(platform string, releaseType string) ([]Release, 
 
 		releaseParts := strings.Split(prettyKey, ".")
 
+		if prettyKey == "" {
+			continue
+		}
 		majorReleaseParts := strings.Split(releaseParts[0], "-")
 
 		majorRelease, err := strconv.Atoi(majorReleaseParts[len(majorReleaseParts)-1])
+		fmt.Println(majorRelease)
 
 		if err != nil {
 			return nil, err
