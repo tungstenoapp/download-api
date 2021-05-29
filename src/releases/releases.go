@@ -106,7 +106,7 @@ func init() {
 	s3Config := &aws.Config{
 		Credentials:      credentials.NewStaticCredentials(os.Getenv("awsAccessKeyId"), os.Getenv("awsSecretAccessKey"), ""),
 		Endpoint:         aws.String(os.Getenv("S3_ENDPOINT")),
-		Region:           aws.String("GRA"),
+		Region:           aws.String("eu-central-1"),
 		S3ForcePathStyle: aws.Bool(true),
 	}
 
